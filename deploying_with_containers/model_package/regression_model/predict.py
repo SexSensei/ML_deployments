@@ -26,7 +26,7 @@ def make_prediction(
         )
 
         results = {
-            'predictions': [np.exp(pred) for pred in predictions],
+            'predictions': [np.exp(pred) for pred in predictions], #type: ignore
             'version': _version,
             'errors': errors,
         }
