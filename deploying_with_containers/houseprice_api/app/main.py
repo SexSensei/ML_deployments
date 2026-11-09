@@ -3,6 +3,7 @@ from fastapi import APIRouter, FastAPI, Request
 from fastapi.responses import HTMLResponse
 from loguru import logger
 
+from starlette.middleware.cors import CORSMiddleware
 from app.api import api_router
 from app.config import settings, setup_app_logging
 
