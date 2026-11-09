@@ -14,6 +14,6 @@ def test_data() -> pd.DataFrame:
 
 @pytest.fixture()
 def client() -> Generator:
-    with testClient(app) as _client:
+    with TestClient(app) as _client:
         yield _client
-        app.dependecy_overrides = {}
+        app.dependency_overrides = {}
